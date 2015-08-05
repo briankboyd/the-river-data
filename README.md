@@ -5,7 +5,7 @@ This is a Gradle project, to get started I installed an Eclipse plugin to assist
 To generate the top300.csv file right click the Top300.groovy file and Run As Groovy Script.
 
 To import the top300.csv file into a database(postgres support) run the following snippets in pgadmin3 to create a database and table.
-
+```PLpgSQL
 CREATE DATABASE theriver
   WITH OWNER = postgres
        ENCODING = 'UTF8'
@@ -33,3 +33,4 @@ psql -U postgres
 \c Top300
 //remove all rows and copy command to import the csv file, make sure to update the path to the file
 truncate Top300; \copy top300 FROM 'C:\Users\boyd\Documents\projects\the-river-data\top300.csv' DELIMITER ',' CSV;
+```
