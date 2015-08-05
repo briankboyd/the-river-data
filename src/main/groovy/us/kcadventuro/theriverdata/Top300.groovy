@@ -14,7 +14,7 @@ def team;
 def byeWeek;
 def positionRank;
 def csv = StringBuilder.newInstance();
-def delimiter = "|";
+def delimiter = ",";
 
 def setOverallPlayerRankId( column ) {
 	overallPlayerRankId = column.findAll( /\d+/ )*.toInteger()[0];
